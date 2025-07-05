@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputEl {
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 10px;
+}
+
+.businessData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
