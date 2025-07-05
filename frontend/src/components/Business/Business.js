@@ -12,7 +12,7 @@ const Business = () => {
         e.preventDefault()
         setLoading(true)
         try {
-            const response = await fetch('http://localhost:5000/business-data', {
+            const response = await fetch('https://business-assignment-backend.onrender.com/business-data', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({name, location}),
@@ -28,7 +28,7 @@ const Business = () => {
 
     const handleRegenerate = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/regenerate-headline?name=${name}&location=${location}`)
+            const res = await fetch(`https://business-assignment-backend.onrender.com/regenerate-headline?name=${name}&location=${location}`)
             const data = await res.json()
             setBusinessData(prev => ({...prev, headline: data.headline}))
         } catch (err){
